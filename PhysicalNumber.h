@@ -7,21 +7,22 @@
 using namespace std;
 
 namespace ariel{
-
+/*
   enum class Remainder: int{
         Length,
         Weight,
         Time
 };
 
-bool equals(const Remainder& r1 , const Remainder& r2);
 
+bool equals(const Remainder& r1 , const Remainder& r2);
+*/
 
 class PhysicalNumber{
 
   double _value;
   Unit _unit;
-  Remainder _r;
+  int _r;
 
 
 
@@ -29,15 +30,15 @@ public:
 
   PhysicalNumber(double,Unit);
 
-
+  PhysicalNumber compare(const PhysicalNumber& p1 , const PhysicalNumber& p2);
   friend ostream& operator<<(ostream& os, const PhysicalNumber& num);
   friend istream& operator>> (istream& is, PhysicalNumber& num);
 
   // arithmetic operators
 		const PhysicalNumber operator-() const; // *-1
 		const PhysicalNumber operator+() const; // does nothing
-		const PhysicalNumber operator+(const PhysicalNumber&) const; // add and return new
-		PhysicalNumber& operator-(const PhysicalNumber&) ; //sub
+		const PhysicalNumber operator+(const PhysicalNumber&); // add and return new
+		PhysicalNumber operator-(const PhysicalNumber&) ; //sub
 		PhysicalNumber& operator+=(const PhysicalNumber&);  //sum this + other
 		PhysicalNumber& operator-=(const PhysicalNumber&); // decrease
 

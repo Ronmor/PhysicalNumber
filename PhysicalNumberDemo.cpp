@@ -17,11 +17,14 @@ int main() {
   try {
     PhysicalNumber a(2, Unit::KM);   // 2 kilometers
     PhysicalNumber b(300, Unit::M);  // 300 meters
-    cout << a << endl;   // Prints "2[km]"
+    cout << a << endl;
+    cout << b << endl;  // Prints "2[km]"
     cout << (a+b) << endl;   // Prints "2.3[km]"
+  //std::cout << "(a+b) was good " << '\n';
     cout << (b-a) << endl;   // Prints "-1700[m]"
+    //std::cout << "(b-a) was good" << '\n';
     cout << (-a) << endl;   // Prints "-2[km]"
-
+    //std::cout << "-a was good" << '\n';
     cout << boolalpha; // print booleans as strings from now on:
     cout << (a>b) << endl;  // Prints "true"
     cout << (a<=b) << endl;  // Prints "false"
