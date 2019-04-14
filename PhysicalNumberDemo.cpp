@@ -33,7 +33,9 @@ int main() {
     istringstream input("700[kg]");
     input >> a;
     cout << a << endl;   // Prints "700[kg]"
+    //std::cout << "+=" << '\n';
     cout << (a += PhysicalNumber(1, Unit::TON)) << endl;  // prints "1700[kg]"
+    //std::cout << "did" << '\n';
     cout << a << endl;   // Prints "1700[kg]" since a has changed.
 
     try {

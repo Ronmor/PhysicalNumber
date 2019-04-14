@@ -32,7 +32,7 @@ public:
 
   PhysicalNumber compare(const PhysicalNumber& p1 , const PhysicalNumber& p2);
   friend ostream& operator<<(ostream& os, const PhysicalNumber& num);
-  friend istream& operator>> (istream& is, PhysicalNumber& num);
+  friend istream& operator>> (istream& is,PhysicalNumber& num);
 
   // arithmetic operators
 		const PhysicalNumber operator-() const; // *-1
